@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/simple-qrcode', function () {
-    return view('simple-qrcode');
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('simple-qrcode', [\App\Http\Controllers\SimpleQRcodeController::class, 'generate']);
+require __DIR__.'/auth.php';
