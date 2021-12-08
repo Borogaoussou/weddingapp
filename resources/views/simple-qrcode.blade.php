@@ -5,6 +5,7 @@
 </head>
 <body>
 <!-- On affiche le code QR au format SVG -->
+On affiche
 {{ $qrcode }}
 </body>
 </html>
