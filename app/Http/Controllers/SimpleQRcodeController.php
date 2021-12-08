@@ -7,32 +7,42 @@ use Illuminate\Http\Request;
 # 1. La facade QrCode
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
+use Illuminate\Support\Str;
+
 
 class SimpleQRcodeController extends Controller
 {
-    // L'action "generate" de la route "simple-qrcode" (GET)
-    public function generate () {
-
-        $path = public_path('');
-
-        # 2. On génère un QR code de taille 200 x 200 px
-        $qrcode = QrCode::size(200)->generate("Mexan Gontran KABA; Table 56, Chaise 5", $path.'\MexanKaba.svg');
-
-        // Enregistrer le QR code dans un dossier
-        //$this->saveQrCode($qrcode);
-
-        dd($qrcode);
-        # 3. On envoie le QR code généré à la vue "simple-qrcode"
-        return view("simple-qrcode", compact('qrcode'));
-    }
 
     /**
-     * Enregistrer le QR code dans un dossier.
+     * Generation d'un qrcode.
      *
-     * @return
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    private function saveQrCode ($qrcode)
+    public function qrcode()
     {
-        dd($qrcode);
+        # Je defini le chemin du dossier ou sera enregistré le fichier
+        $path = public_path('qrcode');
+
+        # Je verifi que le dossier existe sinon je le crée
+        if (!is_dir($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        # Je crée le nom du fichier
+        do {
+            $fileName = Str::random(10) . '.png';
+        } while(file_exists($path. '/' . $fileName));
+
+        # Je genère le qrcode au format png et je l'enregistre
+        $qrcode = QrCode::format('png')
+                            ->size(200)
+                            ->generate("Mexan Gontran KABA; Table 56, Chaise 5", $path.'/'.$fileName);
+
+        # Je crée l'url pour pouvoir acceder au fichier dans la vue
+        $url = 'qrcode/'.$fileName;
+
+
+        return view('qrcode', compact('url'));
     }
+
 }

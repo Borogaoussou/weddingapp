@@ -22,6 +22,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/qrcode', [SimpleQRcodeController::class, 'generate']);
+# La route pour la generation du qr code
+Route::get('/generate', [SimpleQRcodeController::class, 'qrcode']);
+
 
 require __DIR__.'/auth.php';
