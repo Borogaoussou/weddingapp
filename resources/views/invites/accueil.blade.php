@@ -48,6 +48,8 @@
       <a class="navbar-brand page-scroll" href="#page-top">Accueil</a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
+    <form method="POST" action="{{ route('logout') }}">
+      @csrf
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about" class="page-scroll">Programme</a></li>
@@ -55,8 +57,14 @@
         <li><a href="#portfolio" class="page-scroll">Lieu</a></li>
         <li><a href="#achievements" class="page-scroll">Résumé</a></li>
         <li><a href="#contact" class="page-scroll">Vos Contacts</a></li>
+        <li><a href="route('logout')" class="page-scroll"
+                onclick="event.preventDefault(); this.closest('form').submit();">
+            {{ __('Log Out') }}
+        </a></li>
       </ul>
     </div>
+  </form>
+
     <!-- /.navbar-collapse --> 
   </div>
   <!-- /.container-fluid --> 
