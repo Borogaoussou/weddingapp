@@ -25,5 +25,8 @@ Route::get('/dashboard', function () {
 # La route pour la generation du qr code
 Route::get('/generate', [SimpleQRcodeController::class, 'qrcode']);
 
+Route::get('testMexan', function (){
+   dd(config('admin.admin_name'));
+});
 
 require __DIR__.'/auth.php';
