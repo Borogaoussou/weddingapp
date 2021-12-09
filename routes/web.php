@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SimpleQRcodeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,15 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
-# La route pour la generation du qr code
-Route::get('/generate', [SimpleQRcodeController::class, 'qrcode']);
 
-Route::get('testMexan', function (){
-   dd(config('admin.admin_name'));
+Route::get('mariage', '\App\Http\Controllers\MariageController@index');
+
+
+Route::middleware(['auth', 'role:admin'])->group(function() {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth'])->name('dashboard');
 });
 
 require __DIR__.'/auth.php';
