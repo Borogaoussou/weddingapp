@@ -19,12 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
-# La route pour la generation du qr code
-Route::get('/generate', [SimpleQRcodeController::class, 'qrcode']);
 
 
 Route::get('/qrcodeView', function () {
@@ -36,5 +31,13 @@ Route::get('/importxls', [TicketController::class, 'import']);
 Route::resources([
     'ticket'=>TicketController::class,
     ]);
+Route::get('mariage', '\App\Http\Controllers\MariageController@index');
+
+
+Route::middleware(['auth', 'role:admin'])->group(function() {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth'])->name('dashboard');
+});
 
 require __DIR__.'/auth.php';
