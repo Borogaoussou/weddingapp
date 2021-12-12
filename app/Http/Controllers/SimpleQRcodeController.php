@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 # 1. La facade QrCode
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
-
 use Illuminate\Support\Str;
+use App\Models\Ticket;
 
 
 class SimpleQRcodeController extends Controller
@@ -43,6 +43,35 @@ class SimpleQRcodeController extends Controller
 
 
         return view('qrcode', compact('url'));
+    }
+
+    public function generateQrcode($id)
+    {
+        #obtention des infos de l'invité
+        $guest = Ticket::find($id);
+
+        # Je defini le chemin du dossier ou sera enregistré le fichier
+        $path = public_path('qrcode');
+
+        # Je verifi que le dossier existe sinon je le crée
+        if (!is_dir($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        # Je crée le nom du fichier
+        do {
+            $fileName = $guest->name.Str::random(10).'.png';
+        } while(file_exists($path. '/' . $fileName));
+
+        # Je genère le qrcode au format png et je l'enregistre
+        $qrcode = QrCode::format('png')
+            ->size(200)
+            ->generate($guest->name.';Table '.$guest->table, $path.'/'.$fileName);
+
+        # Je crée l'url pour pouvoir acceder au fichier dans la vue
+        $url = 'qrcode/'.$fileName;
+
+        return $url;
     }
 
 }

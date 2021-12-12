@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SimpleQRcodeController;
+use App\Http\Controllers\TicketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +26,15 @@ Route::get('/dashboard', function () {
 # La route pour la generation du qr code
 Route::get('/generate', [SimpleQRcodeController::class, 'qrcode']);
 
-Route::get('testMexan', function (){
-   dd(config('admin.admin_name'));
-});
+
+Route::get('/qrcodeView', function () {
+    $qrcode = $_GET['option'];
+    return view('qrcode', compact('qrcode'));
+})->middleware(['auth'])->name('qrcodeView');
+
+Route::get('/importxls', [TicketController::class, 'import']);
+Route::resources([
+    'ticket'=>TicketController::class,
+    ]);
 
 require __DIR__.'/auth.php';
