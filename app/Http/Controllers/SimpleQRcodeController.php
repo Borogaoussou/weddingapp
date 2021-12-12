@@ -66,7 +66,7 @@ class SimpleQRcodeController extends Controller
         # Je genère le qrcode au format png et je l'enregistre
         $qrcode = QrCode::format('png')
             ->size(200)
-            ->generate($guest->name.';Table '.$guest->table, $path.'/'.$fileName);
+            ->generate($guest->name.';Table '.$guest->table.';'.$guest->key, $path.'/'.$fileName);
 
         # Je crée l'url pour pouvoir acceder au fichier dans la vue
         $url = 'qrcode/'.$fileName;
