@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SimpleQRcodeController;
 use App\Http\Controllers\TicketController;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +30,7 @@ Route::get('/qrcodeView', function () {
 Route::get('/importxls', [TicketController::class, 'import']);
 Route::resources([
     'ticket'=>TicketController::class,
+    'user'=>UserController::class,
     ]);
 Route::get('mariage', '\App\Http\Controllers\MariageController@index');
 

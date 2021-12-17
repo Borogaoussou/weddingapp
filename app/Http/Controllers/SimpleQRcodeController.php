@@ -45,11 +45,8 @@ class SimpleQRcodeController extends Controller
         return view('qrcode', compact('url'));
     }
 
-    public function generateQrcode($id)
+    public function generateQrcode($textQrcode, $fileQrcode)
     {
-        #obtention des infos de l'invité
-        $guest = Ticket::find($id);
-
         # Je defini le chemin du dossier ou sera enregistré le fichier
         $path = public_path('qrcode');
 
@@ -60,13 +57,13 @@ class SimpleQRcodeController extends Controller
 
         # Je crée le nom du fichier
         do {
-            $fileName = $guest->name.Str::random(10).'.png';
+            $fileName = $fileQrcode.Str::random(10).'.png';
         } while(file_exists($path. '/' . $fileName));
 
         # Je genère le qrcode au format png et je l'enregistre
         $qrcode = QrCode::format('png')
             ->size(200)
-            ->generate($guest->name.';Table '.$guest->table.';'.$guest->key, $path.'/'.$fileName);
+            ->generate($textQrcode, $path.'/'.$fileName);
 
         # Je crée l'url pour pouvoir acceder au fichier dans la vue
         $url = 'qrcode/'.$fileName;
