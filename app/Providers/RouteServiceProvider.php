@@ -21,6 +21,19 @@ class RouteServiceProvider extends ServiceProvider
     public const DASHBOARD = '/dashboard';
     public const GUEST_ACCUEIL = '/mariage';
 
+
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+
+    public function isGuest()
+    {
+        return $this->role !== 'admin';
+    }
+
     /**
      * The controller namespace for the application.
      *

@@ -1,536 +1,823 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr"><!-- Basic -->
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Event</title>
-<meta name="description" content="">
-<meta name="author" content="">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Mariama & Elvis</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="ouatinkabo" content="">
 
-<!-- Favicons
-    ================================================== -->
-<link rel="shortcut icon" href="{{ url('img/favicon.ico') }}" type="image/x-icon">
-<link rel="apple-touch-icon" href="{{ url('img/apple-touch-icon.png') }}">
-<link rel="apple-touch-icon" sizes="72x72" href="{{ url('img/apple-touch-icon-72x72.png') }}">
-<link rel="apple-touch-icon" sizes="114x114" href="{{ url('img/apple-touch-icon-114x114.png') }}">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{{asset('images/mini3.png')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{asset('images/mini3.png')}}">
 
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="{{ url('css/bootstrap.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url('fonts/font-awesome/css/font-awesome.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="{{asset('css/pogo-slider.min.css')}}">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 
-<!-- Slider
-    ================================================== -->
-<link href="{{ url('css/owl.carousel.css') }}" rel="stylesheet" media="screen">
-<link href="{{ url('css/owl.theme.css') }}" rel="stylesheet" media="screen">
-
-<!-- Stylesheet
-    ================================================== -->
-<link rel="stylesheet" type="text/css"  href="{{ url('css/style.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url('css/nivo-lightbox/nivo-lightbox.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url('css/nivo-lightbox/default.css') }}">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300" rel="stylesheet" type="text/css">
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-<!-- Navigation
-    ==========================================-->
-<nav id="menu" class="navbar navbar-default navbar-fixed-top">
-  <div class="container"> 
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Accueil</a> </div>
-    
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <form method="POST" action="{{ route('logout') }}">
-      @csrf
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about" class="page-scroll">Programme</a></li>
-        <li><a href="#services" class="page-scroll">Participants</a></li>
-        <li><a href="#portfolio" class="page-scroll">Lieu</a></li>
-        <li><a href="#achievements" class="page-scroll">Résumé</a></li>
-        <li><a href="#contact" class="page-scroll">Vos Contacts</a></li>
-        <li><a href="route('logout')" class="page-scroll"
-                onclick="event.preventDefault(); this.closest('form').submit();">
-            {{ __('Log Out') }}
-        </a></li>
-      </ul>
-    </div>
-  </form>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
-    <!-- /.navbar-collapse --> 
-  </div>
-  <!-- /.container-fluid --> 
-</nav>
-<!-- Header -->
-<header id="header">
-  <div class="intro">
-    <div class="overlay">
-      <div class="container">
-        <div class="row">
-          <div class="intro-text"> <span>Bienvenue à l'évènement</span>
-            <h1>LinuxOne</h1>
-            <p>Séminaire IBM & CFAO TECHNOLOGIES <br>
-              Les solutions pour relever les défis de demains.</p>
-            <a href="#about" class="btn btn-custom btn-lg page-scroll">Programme</a> </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-<!-- About Section -->
-<div id="about">
-  <div class="container">
-    <div class="section-title text-center center">
-      <h2>Programme</h2>
-      <h3>Schedule</h3>
-      <hr>
-    </div>
-
-     <table class="table table-bordered table-condensed table-hover ">
-    <caption><b>Contrats</b></caption> <!-- tableau listant les différents utilisateurs -->
-    <thead>
-    <tr>
-        <th>Heures / Hours</th>
-        <th>Evènement / Event</th>
-
-    </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td>08H30-09H00 </td>
-          <td>Accueil des participants </td>
-      </tr>
-      <tr>
-          <td>09H00 – 09H15 </td>
-          <td>Ouverture et mot de bienvenue <br/>
-Alain KOHOU 
-Directeur Général CFAO TECHNOLOGIES 
- </td>
-      </tr>
-      <tr>
-          <td>09H-15 – 09H-30  </td>
-          <td>Présentation Offres CFAO Technologies 
-Speaker : Mamadou Mar 
- </td>
-      </tr>
-      <tr>
-          <td>09H30 – 10H30 </td>
-          <td>Paysage Serveur en 2018 ... Quel choix faire pour votre environnement ? 
-Speaker : Ibrahima Chamel & Ibrahima Cherif </td>
-      </tr>
-      <tr>
-          <td>10H30 – 11H10 </td>
-          <td>Optimisation des licenses Oracle sur des serveurs IBM : 
-Oracle Tendance System .... et Comment réduire vos couts
-Speaker : Ibrahima Cherif </td>
-      </tr>
-      <tr>
-           <td>11H10 – 11H30 </td>
-          <td>Pause CAFE </td>
-      </tr>
-      <tr>
-          <td>11H30 – 12H15 </td>
-          <td>Le Flash Systems :
-Accélérer la performance de vos applications avec du Flash
-Speaker : Jean Marie Ibrahima Ndiaye </td>
-      </tr>
-      <tr>
-          <td>12H15 – 13H00  </td>
-          <td>
-  Software Defined Storage : C’est QUOI ?
-Speaker : Ibrahima Chérif </td>
-      </tr>
-      <tr>
-          <td>13H00 – 14H30 </td>
-          <td>Pause Déjeuner </td>
-      </tr>
-      <tr>
-          <td>14H30 – 15H00</td>
-          <td>Comment protéger votre environnement avec IBM Spectrum Protect / IBM Spectrum Protect Plus
-          Speaker : Alioune Badara Kane
-           </td>
-      </tr>
-      <tr>
-          <td>15H00- 15H30 </td>
-          <td>Mettre en place un PRA
-
-Speaker : Alioune Badara Kane </td>
-      </tr>
-      <tr>
-          <td>15H30 – 16H00  </td>
-          <td>Q & A </td>
-      </tr>
-      <tr>
-          <td><b>Programme du DIMANCHE  </b></td>
-      </tr>
-      <tr>
-          <td>Avant départ 12H00 </td>
-          <td>Mot de clôture 
-Alain KOHOU 
-Directeur Général CFAO TECHNOLOGIES
-</td>
-      </tr>
-
-      </tbody>
-      </table>
-
-  <!--  <div class="row">
-      <div class="col-xs-12 col-md-6"> <img src="img/about.png" class="img-responsive" alt=""> </div>
-      <div class="col-xs-12 col-md-6">
-        <div class="about-text">
-          <h3>Lorem ipsum dolor sit amet!</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
-        </div>
-      </div>
-    </div>
--->
-
-  </div>
-</div>
-<!-- Services Section -->
-<div id="services" class="text-center">
-  <div class="container">
-    <div class="col-md-10 col-md-offset-1 section-title">
-      <h2>Participants</h2>
-        <h3>Contributors</h3>
-
-      <hr>
-      
-    </div>
-
-    <table class="table table-bordered table-condensed table-hover ">
-    <thead>
-    <tr>
-        <td><b>#</b></td>
-        <td><b>NOM / Name</b></td>
-
-    </tr>
-    </thead>
-    <tbody>
-
-<tr><td>#1 </td><td> RIBEIRO Arnando</tr>
-<tr><td>#2</td> <td> DIOUF Mahécor</tr>
-<tr><td>#3 </td><td> SECK  Omar</tr>
-<tr><td>#4 </td><td> CISSE Birahim</tr>
-<tr><td>#5 </td><td> DIONGUE Mor</tr>
-<tr><td>#6 </td><td> DIAW  Abdoulaye</tr>
-<tr><td>#7 </td><td> FALL  Tamsir</tr>
-<tr><td>#8 </td><td> FALL  Mor SADIO</tr>
-<tr><td>#9 </td><td> DIALLO  Alpha</tr>
-<tr><td>#10 </td><td>DAFF  Ibrahima</tr>
-<tr><td>#11 </td><td>LO  Serigne Niomré</tr>
-<tr><td>#12 </td><td>WADE  Mamadou</tr>
-<tr><td>#13 </td><td>BA  Coutaille </tr>
-<tr><td>#14</td><td> NDIAYE  Mohamed </tr>
-<tr><td>#15</td><td> KANE  Djiby</tr>
-<tr><td>#16</td><td> GUEYE EL Hadj Amadou</tr>
-<tr><td>#17</td><td> KOHOU Alain</tr>
-<tr><td>#18</td><td> MAR Mamadou</tr>
-<tr><td>#19</td><td> BOURIG  Rachid</tr>
-<tr><td>#20</td><td> KANE  Alioune Badara</tr>
-<tr><td>#21</td><td> DIEME Abdoulaye</tr>
-<tr><td>#22</td><td> DIALLO  Fama</tr>
-<tr><td>#23</td><td> DASYLVA Clara</tr>
-<tr><td>#24</td><td> DIOUF Florence</tr>
-<tr><td>#25</td><td> SENE  Ababacar</tr>
-<tr><td>#26</td><td> DIOP  Yaye Faty</tr>
-<tr><td>#27</td><td> SYLLA Armand</tr>
-<tr><td>#28</td><td> DIENG Ousmane Lyssa</tr>
-<tr><td>#29</td><td> BA  Assane</tr>
-<tr><td>#30</td><td> LO  Moukhtar</tr>
-<tr><td>#31</td><td> AKA Louis</tr>
-<tr><td>#32</td><td> NDIAYE  Jean Marie</tr>
-<tr><td>#33</td><td> MBAYE Ousmane Blé</tr>
-<tr><td>#34</td><td> OBAMA Pedro</tr>
-<tr><td>#35</td><td> CHERIF  Ibrahima</tr>
-<tr><td>#36</td><td> CHAMEL  Ibrahim</tr>
-<tr><td>#37</td><td> TINE   Papa Moussa</tr>
-    </tbody>
-    </table>
-
-
-  </div>
-</div>
-<!-- Portfolio Section -->
-<div id="portfolio">
-  <div class="container">
-    <div class="section-title text-center center">
-      <h2>Lieu</h2>
-      <h3>Place</h3>
-      <hr>
-      <p><h3><b>Royal Baobab Somone Ex Baobab Decameron.</b></h3></p>
-      <p>Pour des raisons de sécurité, nous vous demandons de porter votre badge durant toute la durée du séminaire.<br/>
-<b>Localisation</b><br/>
-L´hôtel est situé dans le village de La Somone, sur la Petite Côte<br/>
-<b>Chambre</b><br/>
-Une chambre vous est réservée et prises en charge par le Club DSI
-Vous avez aussi la possibilité d’inviter vos conjoint(e)s moyennant une participation symbolique de 35.000 par nuitée.<br/>
-<b>Restauration</b><br/>
-La restauration est comprise dans le forfait hébergement hors extra.<br/>
-
-      </p>
-    </div>
-    <div class="categories">
-      <ul class="cat">
-        <!--<li>
-          <ol class="type">
-            <li><a href="#" data-filter="*" class="active">All</a></li>
-            <li><a href="#" data-filter=".lorem">Lorem Ipsum</a></li>
-            <li><a href="#" data-filter=".dolor">Dolor Sit</a></li>
-            <li><a href="#" data-filter=".adipiscing">Adipiscing Elit</a></li>
-          </ol>
-        </li>-->
-      </ul>
-      <div class="clearfix"></div>
-    </div>
-    <div class="row">
-      <div class="portfolio-items">
-        <div class="col-sm-6 col-md-3 col-lg-3 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{{ url('img/portfolio/01-large.jpg') }}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-              </div>
-              <img src="{{url('img/portfolio/01-small.jpg')}}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{{ url('img/portfolio/02-large.jpg') }}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-              </div>
-              <img src="{{url('img/portfolio/02-small.jpg')}}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{{ url('img/portfolio/03-large.jpg') }}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-              </div>
-              <img src="{{url('img/portfolio/03-small.jpg')}}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{{ url('img/portfolio/04-large.jpg') }}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-              </div>
-              <img src="{{url('img/portfolio/04-small.jpg')}}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div><!--
-        <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Adipiscing Elit</h4>
-              </div>
-              <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 dolor">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dolor Sit</h4>
-              </div>
-              <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 dolor">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dolor Sit</h4>
-              </div>
-              <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Lorem Ipsum</h4>
-              </div>
-              <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 adipiscing">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Adipiscing Elit</h4>
-              </div>
-              <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 dolor">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/10-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dolor Sit</h4>
-              </div>
-              <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 dolor">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/11-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dolor Sit</h4>
-              </div>
-              <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/12-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Lorem Ipsum</h4>
-              </div>
-              <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>-->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Achievements Section -->
-<div id="achievements" class="text-center">
-  <div class="overlay">
-    <div class="container">
-      <div class="section-title center">
-        <h2>Résumé</h2>
-        <h2>Summary</h2>
-        <hr>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-sm-3">
-          <div class="achievement-box"> <span class="count">37</span>
-            <h4>Participants / Contributors</h4>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-3">
-          <div class="achievement-box"> <span class="count">13</span>
-            <h4>Evènements / Events</h4>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-3">
-          <div class="achievement-box"> <span class="count">06</span>
-            <h4>Intervenants / Speakers</h4>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-3">
-          <div class="achievement-box"> <span class="count">02</span>
-            <h4>Jours / Days</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Testimonials Section --><!--
-<div id="testimonials" class="text-center">
-  <div class="container">
-    <div class="section-title">
-      <h2>Testimonials</h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <div id="testimonial" class="owl-carousel owl-theme">
-          <div class="item"> <img src="img/clients/01.jpg" alt=""/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
-            <p><strong>John DOE</strong>, CEO, Company.</p>
-          </div>
-          <div class="item"> <img src="img/clients/02.jpg" alt=""/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
-            <p><strong>Jenny DOE</strong>, CEO, Company.</p>
-          </div>
-          <div class="item"> <img src="img/clients/03.jpg" alt=""/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapibus leo nec ornare diam.</p>
-            <p><strong>John DOE</strong>, CEO, Company.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
--->
-<!-- Contact Section -->
-<div id="contact" class="text-center">
-  <div class="container">
-    <div class="section-title center">
-      <h2>Vos contacts</h2>
-      <h2>Your contacts</h2>
-      <hr>
-      <p>Pour tout besoin ou aide nécessaire, merci de vous rapprocher des personnes ci-dessous </p>
-      <p>
-For any need or help, please contact the following people</p>
-
-<p><b>Club DSI :       Monsieur Birahim CISSE :      Tél : 77 XXX XX XX</b></p>
-<p><b>CFAO TECHNOLOGIES :  Madame DIOP Yaye Faty :       Tél : 77 XXX XX XX </b></p>
-
-    </div>
-
-<!--
-    <div class="col-md-8 col-md-offset-2">
-      <form name="sentMessage" id="contactForm" novalidate>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
-              <p class="help-block text-danger"></p>
+	<!-- LOADER -->
+    <div id="preloader">
+		<div class="preloader pulse">
+			<h3>Mariama & Elvis</h3>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+	
+	<!-- Start header -->
+	<header class="top-header">
+		<nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+				<a class="navbar-brand" href="{{url('/mariage')}}"><img src="images/logo3.png" alt="image"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="#home">Accueil</a></li>
+                        <li><a class="nav-link" href="#about">Les Mariés</a></li>
+                        <li><a class="nav-link" href="#story">Programme</a></li>
+                        <!-- <li><a class="nav-link" href="#family">Family</a></li> -->
+                        <!-- <li><a class="nav-link" href="#gallery">Gallery</a></li> -->
+						<li><a class="nav-link" href="#weddinginfo">Vos Informations</a></li>
+                        <!-- <li><a class="nav-link" href="#events">Events</a></li> -->
+						<li><a class="nav-link" href="#contact">Nous Contacter</a></li>
+						<li><a class="nav-link" href="route('logout')"
+							onclick="event.preventDefault(); this.closest('form').submit();">Déconnexion</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-          <p class="help-block text-danger"></p>
-        </div>
-        <div id="success"></div>
-        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
-      </form>
-      <div class="social">
-        <ul>
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        </ul>
-      </div>
-    </div>-->
+        </nav>
+	</header>
+	<!-- End header -->
+	
+	<!-- Start Banner -->
+	<div class="home-slider">
+		<ul class="rslides">
+			<li><img src="images/img_slide1.jpg" alt=""></li>
+			<li><img src="images/img_slide2.png" alt=""></li>
+			<li><img src="images/slider-03.jpg" alt=""></li>
+		</ul>
+		<div class="lbox-details">
+			<h1>Mariama  & Elvis</h1>
+			<h4>Nous allons nous marier !</h4>
+			<div class="countdown main-time clearfix">
+				<div id="timer">
+					<h3> Samedi 8 Janvier 2022</h3>
+					<div id="days"></div>
+					<div id="hours"></div>
+					<div id="minutes"></div>
+					<div id="seconds"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Banner -->
+	
+	<!-- Start About us -->
+	<div id="about" class="about-box">
+		<div class="about-a1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="title-box">
+							<h2>Mariama BOUKARI <span>&</span> Elvis TIENDREBEOGO</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="row align-items-center about-main-info">
+							<div class="col-lg-4 col-md-6 col-sm-12">
+								<div class="about-m">
+									<div class="about-img">
+										<img class="img-fluid" src="{{url('images/img_mariama1.jpg')}}" alt="" />
+									</div>
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="mailto:mariama@gmail.com"><i class="fa fa-envelope"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-6 col-sm-12">
+								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>Mariama BOUKARI</span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
+								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
+							</div>
+						</div>
+						<div class="row align-items-center about-main-info">
+							<div class="col-lg-4 col-md-6 col-sm-12">
+								<div class="about-m">
+									<div class="about-img">
+										<img class="img-fluid" src="{{url('images/img_elvis1.jpg')}}" alt="" />
+									</div>
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="mailto:elvis@gmail.com"><i class="fa fa-envelope"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-6 col-sm-12">
+								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>Elvis TIENDREBEOGO </span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
+								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End About us -->
 
-  </div>
-</div>
-<div id="footer">
-  <div class="container text-center">
-    <p>Copyright &copy; 2016 Standout. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
-  </div>
-</div>
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
-<script type="text/javascript" src="js/bootstrap.js"></script> 
-<script type="text/javascript" src="js/SmoothScroll.js"></script> 
-<script type="text/javascript" src="js/jquery.counterup.js"></script> 
-<script type="text/javascript" src="js/waypoints.js"></script> 
-<script type="text/javascript" src="js/nivo-lightbox.js"></script> 
-<script type="text/javascript" src="js/jquery.isotope.js"></script> 
-<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="js/contact_me.js"></script> 
-<script type="text/javascript" src="js/owl.carousel.js"></script> 
-<script type="text/javascript" src="js/main.js"></script>
+
+	<!-- Start Story -->
+	<!-- <div id="story" class="story-box main-timeline-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Our Story</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="timeLine">
+				<div class="row">
+					<div class="lineHeader hidden-sm hidden-xs"></div>
+					<div class="lineFooter hidden-sm hidden-xs"></div>
+
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item" >
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">01</span>
+									<span>March </span>
+									<span>2017</span>
+								</div>
+								<div class="image">
+									<img src="images/time-01.jpg" alt="" />
+									<div class="title">
+										<h2>First Meet <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">We met at the wedding of our close friends and immediately found a common language, so a year later our first date happened.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">03</span>
+									<span>April</span>
+									<span>2017</span>
+								</div>
+								<div class="image">
+									<img src="images/time-02.jpg" alt="" />
+									<div class="title">
+										<h2>First date <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">We met at the wedding of our close friends and immediately found a common language, so a year later our first date happened.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">03</span>
+									<span>May</span>
+									<span>2017</span>
+								</div>
+								<div class="image">
+									<img src="images/time-03.jpg" alt="" />
+									<div class="title">
+										<h2>Proposal <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">We met at the wedding of our close friends and immediately found a common language, so a year later our first date happened.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">04</span>
+									<span>June</span>
+									<span>2017</span>
+								</div>
+								<div class="image">
+									<img src="images/time-04.jpg" alt="" />
+									<div class="title">
+										<h2>Engagement <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">For 2 years of work as support engineer responsible about installing and maintenance SWIFT packages for banks. I gain a lot from it before i leave country.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">04</span>
+									<span>July</span>
+									<span>2017</span>
+								</div>
+								<div class="image">
+									<img src="images/time-05.jpg" alt="" />
+									<div class="title">
+										<h2>My Wedding <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">Since then i came to Austria as refugee far from my lovers and friends far a way escaping from wars and threats searching a new life that i didn't find until yet.</p>
+								</div>
+							</div>
+						</div>
+
+				</div>
+			</div>
+			
+		</div>
+	</div> -->
+	<!-- End Story -->
+	
+	<!-- Start Programme -->
+	
+	<div id="story" class="story-box main-timeline-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Au programme</h2>
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> -->
+					</div>
+				</div>
+			</div>
+			<div class="row timeline-element separline">
+				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
+                    <div class="time-line-date-content">
+                        <p class="mbr-timeline-date mbr-fonts-style display-font">
+                            9h00  
+                        </p>
+                    </div>
+				</div>
+				<span class="iconBackground"></span>
+				<div class="col-xs-12 col-md-6 align-left">
+					<div class="timeline-text-content">
+						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">A la Mairie</h4>
+						<p class="mbr-timeline-text mbr-fonts-style display-7">
+						   Le mariage civil débute à 9h à la mairie de Bogodogo. 
+						</p>
+						<p class="mbr-timeline-text mbr-fonts-style display-7">
+							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a> 
+						</p>
+					 </div>
+				</div>
+			</div>
+			<div class="row timeline-element reverse separline">
+				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
+                    <div class="time-line-date-content">
+                        <p class="mbr-timeline-date mbr-fonts-style display-font">
+                            11h00  
+                        </p>
+                    </div>
+				</div>
+				<span class="iconBackground"></span>
+				<div class="col-xs-12 col-md-6 align-right">
+					<div class="timeline-text-content">
+						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">A l'église</h4>
+						<p class="mbr-timeline-text mbr-fonts-style display-7">
+						   Rdv à l'église St Camille au 1200 logements pour le mariage réligieux.
+						</p>
+						<p class="mbr-timeline-text mbr-fonts-style display-7">
+							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a> 
+						</p>
+					 </div>
+				</div>
+			</div>
+			<div class="row timeline-element separline">
+				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
+                    <div class="time-line-date-content">
+                        <p class="mbr-timeline-date mbr-fonts-style display-font">
+                            14h00  
+                        </p>
+                    </div>
+				</div>
+				<span class="iconBackground"></span>
+				<div class="col-xs-12 col-md-6 align-left">
+					<div class="timeline-text-content">
+						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Lunch</h4>
+						<p class="mbr-timeline-text mbr-fonts-style display-7">
+						   Le Lunch se déroulera à l'espace Bon Berger à partir de 14h.
+						</p>
+						<p class="mbr-timeline-text mbr-fonts-style display-7">
+							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a> 
+						</p>
+					 </div>
+				</div>
+			</div>
+			<div class="row timeline-element reverse separline">
+				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
+                    <div class="time-line-date-content">
+                        <p class="mbr-timeline-date mbr-fonts-style display-font">
+                            16h00
+                        </p>
+                    </div>
+				</div>
+				<span class="iconBackground"></span>
+				<div class="col-xs-12 col-md-6 align-right">
+					<div class="timeline-text-content">
+						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Réception à domicile</h4>
+						<p class="mbr-timeline-text mbr-fonts-style display-7">
+						   Une réception est organisée au domicile du marié à 16h00.
+						</p>
+						<p class="mbr-timeline-text mbr-fonts-style display-7">
+							<a href="#"	data-toggle="modal" data-target="#popup-domicile">Voir l'emplacement</a> 
+						</p>
+					 </div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+<!-- 	
+	<div id="family" class="family-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Au programme</h2>
+						<p>Le déroulé de la journée:</p>
+					</div>
+				</div>
+			</div>
+			<div class="row"></div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="images/family-01.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Mr. Alonso Wiles </h4>
+							<p>{ Leida’s Father }</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="images/family-02.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Mr. Evon Wiles </h4>
+							<p>{ Leida’s Mother }</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="images/family-03.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Mr. Chris Wiles </h4>
+							<p>{ Leida’s Brother }</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="images/family-04.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Mr. Adina Wiles </h4>
+							<p>{ Leida’s Sister }</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="images/family-05.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Mr. Annetta Wiles </h4>
+							<p>{ Leida’s Sister }</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="family-img">
+							<img class="img-fluid" src="images/family-06.jpg" alt="" />
+						</div>
+						<div class="family-info">
+							<h4>Mr. Ladonna Wiles </h4>
+							<p>{ Leida’s Sister }</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<!-- End Programme -->
+	
+	<!-- Start Gallery -->
+	<!-- <div id="gallery" class="gallery-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Gallery</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<ul class="popup-gallery clearfix">
+					<li>
+						<a href="images/gallery-01.jpg">
+							<img class="img-fluid" src="images/gallery-01.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/gallery-02.jpg">
+							<img class="img-fluid" src="images/gallery-02.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/gallery-03.jpg">
+							<img class="img-fluid" src="images/gallery-03.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/gallery-04.jpg">
+							<img class="img-fluid" src="images/gallery-04.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/gallery-05.jpg">
+							<img class="img-fluid" src="images/gallery-05.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/gallery-06.jpg">
+							<img class="img-fluid" src="images/gallery-06.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/gallery-07.jpg">
+							<img class="img-fluid" src="images/gallery-07.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/gallery-08.jpg">
+							<img class="img-fluid" src="images/gallery-08.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> -->
+	<!-- End Gallery -->
+
+
+	<!-- Start Modal -->
+	<div class="modal fade" id="popup-domicile" tabindex="-1" role="dialog"
+	style="z-index: 1050; display: none;" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header justify-content-center">
+					<h2 class="modal-title">Domicile</h2>
+					<button type="button" class="close" data-dismiss="modal" arial-label="Fermer">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+					<p style="margin: 0 auto;">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1929.5112075905108!2d-17.46964747851757!3d14.711324498104513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec173eb7e755579%3A0x84bc1adc0f98386e!2sCabinet%20DPM%20CONSULTING!5e0!3m2!1sfr!2sng!4v1639704387751!5m2!1sfr!2sng" 
+						width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Modal -->
+	
+	<!-- Start Wedding -->
+	
+	<div id="weddinginfo" class="wedding-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Vos Informations</h2>
+						<p>Vos informations de la cérémonie</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="serviceBox">
+						<!-- <h4 style="text-decoration: underline">Identité</h4> -->
+                        <div class="service-icon"><i class="flaticon-bachelorette-party"></i></div>
+                        <h3 class="title">{{Auth::user()->nom}} {{Auth::user()->prenom}}</h3>
+						
+						@if (Auth::user()->qrcode !== null)
+						<h4>{{Auth::user()->telephone}}</h4>
+						@else
+						<h4>Pas de contact enregistré</h4>
+						@endif
+                        <!-- <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur, deleniti eaque excepturi.
+                        </p> -->
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="serviceBox">
+						<!-- <h4 style="text-decoration: underline">Votre Table</h4> -->
+                        <div class="service-icon"><i class="flaticon-wedding"></i></div>
+						@if (Auth::user()->nomtable !== null)
+                        <h3 class="title">{{Auth::user()->nomtable}}</h3>
+						@else
+						<h4>Nom de table indisponible</h4>
+						@endif
+
+						@if (Auth::user()->numchaise !== null)
+                        <h4>{{Auth::user()->nomtable}}</h4>
+						@else
+						<h4>Nom de chaise indisponible</h4>
+						@endif
+						<h4>{{Auth::user()->numchaise}}</h4>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="serviceBox">
+						<!-- <h4 style="text-decoration: underline">Code QR</h4> -->
+                        <div class="service-icon"><i class="flaticon-reception-bell"></i></div>
+                        <h3 class="title">Mon Code QR</h3>
+						@if (Auth::user()->qrcode !== null)
+						<a href="/qrcode/{{Auth::user()->qrcode}}" target="_blank">Télécharger mon code<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+						@else
+						<h4>Générer un nouveau code QR</h4>
+						@endif
+						<!-- <h4>06 July 2017 at 10:30 pm</h4>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur, deleniti eaque excepturi.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+	
+	<!-- End Wedding -->
+	
+	<!-- Start Events -->
+	<!-- <div id="events" class="events-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Events</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="event-inner">
+						<div class="event-img">
+							<img class="img-fluid" src="images/event-img-01.jpg" alt="" />
+						</div>
+						<h2>2 June 2018 Engagement</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+						<a href="#">See location <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="event-inner">
+						<div class="event-img">
+							<img class="img-fluid" src="images/event-img-02.jpg" alt="" />
+						</div>
+						<h2>3 June 2018 Main Ceremony </h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+						<a href="#">See location <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="event-inner">
+						<div class="event-img">
+							<img class="img-fluid" src="images/event-img-03.jpg" alt="" />
+						</div>
+						<h2>4 June 2018 Wedding party </h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+						<a href="#">See location <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<!-- End Events -->
+	
+	<!-- Start Contact -->
+
+	<div id="contact">
+		<div class="row">
+			<div id="fh5co-event" class="fh5co-bg" style="background-color: #890025;">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="title-box">
+								<h2 style="color: #ffffff;">Contactez-nous</h2>
+								<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> -->
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="display-t">
+							<div class="display-tc">
+								<div class="col-md-10 col-md-offset-1" style="display: flex; margin: auto;">
+									<div class="col-md-6 col-sm-6 text-center">
+										<div class="event-wrap animate-box">
+											<h3>POUR LA CEREMONIE</h3>
+											<p>Pour toute information relative à la cérémonie, vous pouvez contacter:</p>
+											<div class="event-col">
+												<i class="icon-clock"></i>
+												<span><a class="btn" style="color:#ffffff;" href="mailto:elvis@gmail.com">Elvis Tiendrebeogo</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="mailto:elvis@gmail.com">Mexan Kaba</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="mailto:elvis@gmail.com">Rosane Tiendrebeogo</a></span>
+												<span></span>
+											</div>
+											<div class="event-col">
+												<i class="icon-calendar"></i>
+												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 12 34 56</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 12 34 56</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 12 34 56</a></span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-6 text-center">
+										<div class="event-wrap animate-box">
+											<h3>BESOIN D'UN SITE PAREIL</h3>
+											<p>Vous souhaitez avoir un site pareil pour un de vos évévenements, contactez-nous:</p>
+											<div class="event-col">
+												<i class="icon-clock"></i>
+												<span><a class="btn" style="color:#ffffff;" href="mailto:elvis@gmail.com">Elvis Tiendrebeogo</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="mailto:elvis@gmail.com">Mexan Kaba</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="mailto:elvis@gmail.com"></a></span>
+											</div>
+											<div class="event-col">
+												<i class="icon-calendar"></i>
+												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 12 34 56</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 12 34 56</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456"></a></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="container">			
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 col-xs-12">
+				  <div class="contact-block">
+					<form id="contactForm">
+					  <div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+								<div class="help-block with-errors"></div>
+							</div>                                 
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+								<div class="help-block with-errors"></div>
+							</div> 
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<select class="custom-select d-block form-control" id="guest" required data-error="Please select an item in the list.">
+								  <option disabled selected>Number Of Guest*</option>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								  <option value="5">5</option>
+								</select>
+								<div class="help-block with-errors"></div>
+							</div> 
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<select class="custom-select d-block form-control" id="event" required data-error="Please select an item in the list.">
+								  <option disabled selected>I Am Attending*</option>
+								  <option value="1">All events</option>
+								  <option value="2">Wedding ceremony</option>
+								  <option value="3">Reception party</option>
+								</select>
+								<div class="help-block with-errors"></div>
+							</div> 
+						</div>
+						<div class="col-md-12">
+							<div class="form-group"> 
+								<textarea class="form-control" id="message" placeholder="Your Message" rows="8" data-error="Write your message" required></textarea>
+								<div class="help-block with-errors"></div>
+							</div>
+							<div class="submit-button text-center">
+								<button class="btn btn-common" id="submit" type="submit">Send Message</button>
+								<div id="msgSubmit" class="h3 text-center hidden"></div> 
+								<div class="clearfix"></div> 
+							</div>
+						</div>
+					  </div>            
+					</form>
+				  </div>
+				</div>
+			</div>
+		</div> -->
+	</div>
+
+	
+	<!-- End Contact -->
+	
+	<!-- Start Footer -->
+	<footer class="footer-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="footer-company-name">Tous droits réservés. &copy; 2021</p>
+					<p class="footer-company-name">Elvis Tiendrebeogo</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<!-- ALL JS FILES -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.pogo-slider.min.js"></script> 
+	<script src="js/slider-index.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
+    <script src="js/timeLine.min.js"></script>	
+	<script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/custom.js"></script>
+	
 </body>
 </html>
