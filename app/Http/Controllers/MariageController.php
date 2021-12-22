@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 
 
-class MariageController extends Controller 
+class MariageController extends Controller
 {
 
     public function __construct()
@@ -16,7 +16,7 @@ class MariageController extends Controller
 
     public function index()
     {
-        return view('invites.accueil'); 
+        return view('invites.accueil');
     }
 
 }

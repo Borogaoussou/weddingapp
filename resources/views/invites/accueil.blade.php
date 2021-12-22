@@ -2,13 +2,13 @@
 <html lang="fr"><!-- Basic -->
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
+
      <!-- Site Metas -->
-    <title>Mariama & Elvis</title>  
+    <title>Mariama & Elvis</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="ouatinkabo" content="">
@@ -22,7 +22,7 @@
     <!-- Pogo Slider CSS -->
     <link rel="stylesheet" href="{{asset('css/pogo-slider.min.css')}}">
 	<!-- Site CSS -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">    
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
     <!-- Custom CSS -->
@@ -43,7 +43,7 @@
 		</div>
     </div><!-- end loader -->
     <!-- END LOADER -->
-	
+
 	<!-- Start header -->
 	<header class="top-header">
 		<nav class="navbar header-nav navbar-expand-lg">
@@ -72,7 +72,7 @@
         </nav>
 	</header>
 	<!-- End header -->
-	
+
 	<!-- Start Banner -->
 	<div class="home-slider">
 		<ul class="rslides">
@@ -95,7 +95,7 @@
 		</div>
 	</div>
 	<!-- End Banner -->
-	
+
 	<!-- Start About us -->
 	<div id="about" class="about-box">
 		<div class="about-a1">
@@ -164,7 +164,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="timeLine">
 				<div class="row">
 					<div class="lineHeader hidden-sm hidden-xs"></div>
@@ -263,13 +263,13 @@
 
 				</div>
 			</div>
-			
+
 		</div>
 	</div> -->
 	<!-- End Story -->
-	
+
 	<!-- Start Programme -->
-	
+
 	<div id="story" class="story-box main-timeline-box">
 		<div class="container">
 			<div class="row">
@@ -281,10 +281,10 @@
 				</div>
 			</div>
 			<div class="row timeline-element separline">
-				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
+				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">
                     <div class="time-line-date-content">
                         <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            9h00  
+                            9h00
                         </p>
                     </div>
 				</div>
@@ -293,19 +293,19 @@
 					<div class="timeline-text-content">
 						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">A la Mairie</h4>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-						   Le mariage civil débute à 9h à la mairie de Bogodogo. 
+						   Le mariage civil débute à 9h à la mairie de Bogodogo.
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a> 
+							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a>
 						</p>
 					 </div>
 				</div>
 			</div>
 			<div class="row timeline-element reverse separline">
-				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
+				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">
                     <div class="time-line-date-content">
                         <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            11h00  
+                            11h00
                         </p>
                     </div>
 				</div>
@@ -317,16 +317,16 @@
 						   Rdv à l'église St Camille au 1200 logements pour le mariage réligieux.
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a> 
+							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a>
 						</p>
 					 </div>
 				</div>
 			</div>
 			<div class="row timeline-element separline">
-				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
+				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">
                     <div class="time-line-date-content">
                         <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            14h00  
+                            14h00
                         </p>
                     </div>
 				</div>
@@ -338,13 +338,13 @@
 						   Le Lunch se déroulera à l'espace Bon Berger à partir de 14h.
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a> 
+							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a>
 						</p>
 					 </div>
 				</div>
 			</div>
 			<div class="row timeline-element reverse separline">
-				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
+				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">
                     <div class="time-line-date-content">
                         <p class="mbr-timeline-date mbr-fonts-style display-font">
                             16h00
@@ -359,16 +359,16 @@
 						   Une réception est organisée au domicile du marié à 16h00.
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#"	data-toggle="modal" data-target="#popup-domicile">Voir l'emplacement</a> 
+							<a href="#"	data-toggle="modal" data-target="#popup-domicile">Voir l'emplacement</a>
 						</p>
 					 </div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 
-<!-- 	
+<!--
 	<div id="family" class="family-box">
 		<div class="container">
 			<div class="row">
@@ -451,7 +451,7 @@
 		</div>
 	</div> -->
 	<!-- End Programme -->
-	
+
 	<!-- Start Gallery -->
 	<!-- <div id="gallery" class="gallery-box">
 		<div class="container">
@@ -534,7 +534,7 @@
 				<div class="modal-body">
 					<div class="row">
 					<p style="margin: 0 auto;">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1929.5112075905108!2d-17.46964747851757!3d14.711324498104513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec173eb7e755579%3A0x84bc1adc0f98386e!2sCabinet%20DPM%20CONSULTING!5e0!3m2!1sfr!2sng!4v1639704387751!5m2!1sfr!2sng" 
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1929.5112075905108!2d-17.46964747851757!3d14.711324498104513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec173eb7e755579%3A0x84bc1adc0f98386e!2sCabinet%20DPM%20CONSULTING!5e0!3m2!1sfr!2sng!4v1639704387751!5m2!1sfr!2sng"
 						width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
 					</div>
 				</div>
@@ -542,9 +542,9 @@
 		</div>
 	</div>
 	<!-- End Modal -->
-	
+
 	<!-- Start Wedding -->
-	
+
 	<div id="weddinginfo" class="wedding-box">
 		<div class="container">
 			<div class="row">
@@ -555,14 +555,14 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="serviceBox">
 						<!-- <h4 style="text-decoration: underline">Identité</h4> -->
                         <div class="service-icon"><i class="flaticon-bachelorette-party"></i></div>
                         <h3 class="title">{{Auth::user()->nom}} {{Auth::user()->prenom}}</h3>
-						
+
 						@if (Auth::user()->qrcode !== null)
 						<h4>{{Auth::user()->telephone}}</h4>
 						@else
@@ -590,7 +590,7 @@
 						<h4>Nom de chaise indisponible</h4>
 						@endif
 						<h4>{{Auth::user()->numchaise}}</h4>
-                        
+
                     </div>
                 </div>
 
@@ -600,7 +600,7 @@
                         <div class="service-icon"><i class="flaticon-reception-bell"></i></div>
                         <h3 class="title">Mon Code QR</h3>
 						@if (Auth::user()->qrcode !== null)
-						<a href="/qrcode/{{Auth::user()->qrcode}}" target="_blank">Télécharger mon code<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+						<a href="{{url('/qrcodeDown?option='.Auth::user()->qrcode)}}" target="_blank">Télécharger mon code<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 						@else
 						<h4>Générer un nouveau code QR</h4>
 						@endif
@@ -613,9 +613,9 @@
             </div>
 		</div>
 	</div>
-	
+
 	<!-- End Wedding -->
-	
+
 	<!-- Start Events -->
 	<!-- <div id="events" class="events-box">
 		<div class="container">
@@ -662,7 +662,7 @@
 		</div>
 	</div> -->
 	<!-- End Events -->
-	
+
 	<!-- Start Contact -->
 
 	<div id="contact">
@@ -727,7 +727,7 @@
 			</div>
 		</div>
 
-		<!-- <div class="container">			
+		<!-- <div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-sm-12 col-xs-12">
 				  <div class="contact-block">
@@ -737,13 +737,13 @@
 							<div class="form-group">
 								<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
 								<div class="help-block with-errors"></div>
-							</div>                                 
+							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
 								<div class="help-block with-errors"></div>
-							</div> 
+							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
@@ -756,7 +756,7 @@
 								  <option value="5">5</option>
 								</select>
 								<div class="help-block with-errors"></div>
-							</div> 
+							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
@@ -767,20 +767,20 @@
 								  <option value="3">Reception party</option>
 								</select>
 								<div class="help-block with-errors"></div>
-							</div> 
+							</div>
 						</div>
 						<div class="col-md-12">
-							<div class="form-group"> 
+							<div class="form-group">
 								<textarea class="form-control" id="message" placeholder="Your Message" rows="8" data-error="Write your message" required></textarea>
 								<div class="help-block with-errors"></div>
 							</div>
 							<div class="submit-button text-center">
 								<button class="btn btn-common" id="submit" type="submit">Send Message</button>
-								<div id="msgSubmit" class="h3 text-center hidden"></div> 
-								<div class="clearfix"></div> 
+								<div id="msgSubmit" class="h3 text-center hidden"></div>
+								<div class="clearfix"></div>
 							</div>
 						</div>
-					  </div>            
+					  </div>
 					</form>
 				  </div>
 				</div>
@@ -788,9 +788,9 @@
 		</div> -->
 	</div>
 
-	
+
 	<!-- End Contact -->
-	
+
 	<!-- Start Footer -->
 	<footer class="footer-box">
 		<div class="container">
@@ -810,14 +810,14 @@
 	<script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
 	<script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.pogo-slider.min.js"></script> 
+    <script src="js/jquery.pogo-slider.min.js"></script>
 	<script src="js/slider-index.js"></script>
 	<script src="js/smoothscroll.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
-    <script src="js/timeLine.min.js"></script>	
+    <script src="js/timeLine.min.js"></script>
 	<script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
-	
+
 </body>
 </html>

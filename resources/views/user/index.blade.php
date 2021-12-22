@@ -102,7 +102,7 @@
                                 @if($model->status == 0)
                                 <div class="w-4 mr-2 transform hover:text-red-900 hover:scale-110">
                                     <a href="{{url('/user/'.$model->id.'/edit/?option=1')}}">
-                                        <img src="{{asset('img/iconQRcode.svg')}}" alt="icon qrcode"/>
+                                        <img src="{{asset('images/qr-code-svgrepo-com.svg')}}" alt="icon qrcode"/>
                                     </a>
                                 </div>
                                 @endif
