@@ -29,7 +29,7 @@ Route::get('/qrcodeView', function () {
 
 
 Route::get('/qrcodeDown', function () {
-    $file = public_path()."/qrcode/".$_GET['option'];
+    $file = public_path()."/".$_GET['option'];
     $headers = ['Content-Type: image/png'];
     return \Response::download($file, 'qrcode.png', $headers);
 })->middleware(['auth'])->name('qrcodeDown');
