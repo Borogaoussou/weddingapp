@@ -18,10 +18,8 @@ use Illuminate\Support\Facades\Storage;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
-
-
 
 
 Route::get('/qrcodeView', function () {
@@ -29,13 +27,17 @@ Route::get('/qrcodeView', function () {
     return view('qrcode', compact('qrcode'));
 })->middleware(['auth'])->name('qrcodeView');
 
+
 Route::get('/qrcodeDown', function () {
-    $file = public_path()."/".$_GET['option'];
+    $file = public_path()."/qrcode/".$_GET['option'];
     $headers = ['Content-Type: image/png'];
     return \Response::download($file, 'qrcode.png', $headers);
 })->middleware(['auth'])->name('qrcodeDown');
 
+
 Route::get('/importxls', [TicketController::class, 'import']);
+
+
 Route::resources([
     'ticket'=>TicketController::class,
     'user'=>UserController::class,

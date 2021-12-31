@@ -54,6 +54,8 @@
 					<span></span>
 					<span></span>
 				</button>
+                <form method="POST" action="{{ route('logout') }}">
+					@csrf
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
                         <li><a class="nav-link active" href="#home">Accueil</a></li>
@@ -68,6 +70,7 @@
 							onclick="event.preventDefault(); this.closest('form').submit();">Déconnexion</a></li>
                     </ul>
                 </div>
+			</form>
             </div>
         </nav>
 	</header>
@@ -561,9 +564,9 @@
                     <div class="serviceBox">
 						<!-- <h4 style="text-decoration: underline">Identité</h4> -->
                         <div class="service-icon"><i class="flaticon-bachelorette-party"></i></div>
-                        <h3 class="title">{{Auth::user()->nom}} {{Auth::user()->prenom}}</h3>
+                        <h3 class="title">{{Auth::user()->name}}</h3>
 
-						@if (Auth::user()->qrcode !== null)
+						@if (Auth::user()->telephone !== null)
 						<h4>{{Auth::user()->telephone}}</h4>
 						@else
 						<h4>Pas de contact enregistré</h4>
@@ -578,18 +581,18 @@
                     <div class="serviceBox">
 						<!-- <h4 style="text-decoration: underline">Votre Table</h4> -->
                         <div class="service-icon"><i class="flaticon-wedding"></i></div>
-						@if (Auth::user()->nomtable !== null)
-                        <h3 class="title">{{Auth::user()->nomtable}}</h3>
+						@if (Auth::user()->numtable !== null)
+                        <h3 class="title">TABLE {{Auth::user()->numtable}}</h3>
 						@else
 						<h4>Nom de table indisponible</h4>
 						@endif
 
 						@if (Auth::user()->numchaise !== null)
-                        <h4>{{Auth::user()->nomtable}}</h4>
+                        <h4>Chaise {{Auth::user()->numchaise}}</h4>
 						@else
 						<h4>Nom de chaise indisponible</h4>
 						@endif
-						<h4>{{Auth::user()->numchaise}}</h4>
+						{{-- <h4>{{Auth::user()->numchaise}}</h4> --}}
 
                     </div>
                 </div>
