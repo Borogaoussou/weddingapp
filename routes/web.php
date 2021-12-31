@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Storage;
 */
 
 Route::get('/', function () {
-    return redirect('/login');
+    return redirect('/mariage');
 });
 
 

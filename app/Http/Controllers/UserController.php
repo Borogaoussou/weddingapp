@@ -34,7 +34,9 @@ class UserController extends Controller
             Excel::import(new UserImport(), storage_path('/app/public/uploads/templatexl.xlsx'));
             return back()->with('success', 'All good');
         }
+
         $option = true;
+
         return view('user/create', compact('option'));
     }
 
