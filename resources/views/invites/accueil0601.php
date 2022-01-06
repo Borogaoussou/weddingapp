@@ -597,7 +597,11 @@
 						<!-- <h4 style="text-decoration: underline">Code QR</h4> -->
                         <div class="service-icon"><i class="flaticon-reception-bell"></i></div>
                         <h3 class="title">Mon Code QR</h3>
-
+						@if (Auth::user()->qrcode !== null)
+						<a href="{{url('/qrcodeDown?option='.Auth::user()->qrcode)}}" target="_blank">Télécharger mon code<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+						@else
+						<h4>Générer un nouveau code QR</h4>
+						@endif
 						<!-- <h4>06 July 2017 at 10:30 pm</h4>
                         <p class="description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur, deleniti eaque excepturi.
@@ -689,8 +693,8 @@
 											</div>
 											<div class="event-col">
 												<i class="icon-calendar"></i>
-												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 25 86 91 </a></span>
-												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 55 25 38 64</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 12 34 56</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 12 34 56</a></span>
 												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 12 34 56</a></span>
 											</div>
 										</div>
@@ -703,12 +707,12 @@
 												<i class="icon-clock"></i>
 												<span><a class="btn" style="color:#ffffff;" href="mailto:elvis@gmail.com">Elvis Tiendrebeogo</a></span>
 												<span><a class="btn" style="color:#ffffff;" href="mailto:elvis@gmail.com">Mexan Kaba</a></span>
-												<span><a class="btn" style="color:#ffffff;" href="mailto:elvis@gmail.com"></a>Boro Gaoussou</span>
+												<span><a class="btn" style="color:#ffffff;" href="mailto:elvis@gmail.com"></a></span>
 											</div>
 											<div class="event-col">
 												<i class="icon-calendar"></i>
 												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 12 34 56</a></span>
-												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">mgkaba93@gmail.com</a></span>
+												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456">+226 70 12 34 56</a></span>
 												<span><a class="btn" style="color:#ffffff;" href="tel:+22670123456"></a></span>
 											</div>
 										</div>

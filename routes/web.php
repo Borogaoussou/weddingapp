@@ -21,7 +21,7 @@ Route::get('/', function () {
     return redirect('/mariage');
 });
 
-
+/*
 Route::get('/qrcodeView', function () {
     $qrcode = $_GET['option'];
     return view('qrcode', compact('qrcode'));
@@ -36,7 +36,7 @@ Route::get('/qrcodeDown', function () {
 
 
 Route::get('/importxls', [TicketController::class, 'import']);
-
+*/
 
 Route::resources([
     'ticket'=>TicketController::class,
