@@ -129,7 +129,19 @@
 							</div>
 							<div class="col-lg-8 col-md-6 col-sm-12">
 								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>Mariama BOUKARI</span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
+                                <ul style="list-style-type:none;">
+                                    <li>Les familles BOUKARI IBRAHIM et MOUSSA ABOUBACAR à Arlit, Agadez, Zindern Tanout, Dosso, Maradi, Niamey, France et Dakar;
+                                    </li>
+                                    <li>Les familles Garba OUBA à Zinder, Guidan ROUMJI et Abou DANTCHIAWA à Niamey, CANADA et France ;
+                                    </li>
+                                    <li>Les familles Zihadji ABOU à Agadez et Abdoul Karim ASSAO à Ouagadougou et Niamey;
+                                    </li>
+                                    <li>M. Boukari IBRAHIM et son épouse Rabi MOUSSA à Arlit et Zinder;
+                                    </li>
+                                    <li>
+                                        Les familles alliées;
+                                    </li>
+                                </ul>
 							</div>
 						</div>
 						<div class="row align-items-center about-main-info">
@@ -147,7 +159,19 @@
 							</div>
 							<div class="col-lg-8 col-md-6 col-sm-12">
 								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>Elvis TIENDREBEOGO </span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
+                                <ul style="list-style-type:none;">
+                                    <li>Sa majesté le Dapoya Naaba de Saaba;</li>
+                                    <li>Les grandes familles TIENDREBEOGO, NIKIEMA, LAGMAWARE à Saaba, Ouagadougou, Bobo-Dioulassa, Mali, Congo, France et à Dakar ;
+                                    </li>
+                                    <li>La familles ILBOUDO à Ouagadougou, Nioko et à Dakar ;
+                                    </li>
+                                    <li>La famille KABORE, à Ouagadougou, Zorghp et Tibin ;
+                                    </li>
+                                    <li>
+                                        M. TIENDREBEOGO Désiré et son épouse TIENDREOBEOGO/KABORE Adèle à Katre-Yaar (secteur 46);
+                                    </li>
+                                    <li>Les familles alliées;</li>
+                                </ul>
 							</div>
 						</div>
 					</div>
