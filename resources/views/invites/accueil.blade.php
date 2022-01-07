@@ -108,7 +108,7 @@
 				<div class="row">
 					<div class="col-lg-12 text-center">
 						<div class="title-box">
-							<h2>Mariama BOUKARI <span>&</span> Elvis TIENDREBEOGO</h2>
+							<h2>Les Mariés</h2>
 						</div>
 					</div>
 				</div>
@@ -172,6 +172,14 @@
                                     </li>
                                     <li>Les familles alliées;</li>
                                 </ul>
+							</div>
+							<div class="row">
+								<div class="col-lg-12 text-center">
+									<div class="title-box">
+										<p><br><br>Ont le plaisir de vous faire part du mariage de leus enfants</p><br>
+										<h2>Mariama BOUKARI <span>&</span> Elvis TIENDREBEOGO</h2>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -313,7 +321,7 @@
 				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">
                     <div class="time-line-date-content">
                         <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            11h00
+                            09h00
                         </p>
                     </div>
 				</div>
@@ -322,7 +330,7 @@
 					<div class="timeline-text-content">
 						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">A la Mairie</h4>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-						   Le mariage civil débute à 11h00 à la mairie de Bogodogo.
+						   Le mariage civil débute à 09h00 à la mairie de Bogodogo.
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
 							<a href="#" data-toggle="modal" data-target="#popup-mairie">Cliquer ici pour voir l'emplacement sur Google Maps</a>
@@ -334,14 +342,14 @@
 				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">
                     <div class="time-line-date-content">
                         <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            11h45
+                            11h00
                         </p>
                     </div>
 				</div>
 				<span class="iconBackground"></span>
 				<div class="col-xs-12 col-md-6 align-right">
 					<div class="timeline-text-content">
-						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">A l'église</h4>
+						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">A l'église St Camille</h4>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
 						   Rdv à l'église St Camille au 1200 logements pour le mariage réligieux.
 						</p>
