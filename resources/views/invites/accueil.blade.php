@@ -325,7 +325,7 @@
 						   Le mariage civil débute à 11h00 à la mairie de Bogodogo.
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#" target="_blank"  data-target="#popup-mairie">Cliquer ici pour voir l'emplacement sur Google Maps</a>
+							<a href="#" data-toggle="modal" data-target="#popup-mairie">Cliquer ici pour voir l'emplacement sur Google Maps</a>
 						</p>
 					 </div>
 				</div>
@@ -346,7 +346,7 @@
 						   Rdv à l'église St Camille au 1200 logements pour le mariage réligieux.
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#" target="_blank"  data-target="#popup-eglise">Cliquer ici pour voir l'emplacement sur Google Maps</a>
+							<a href="#" data-toggle="modal" data-target="#popup-eglise">Cliquer ici pour voir l'emplacement sur Google Maps</a>
 						</p>
 					 </div>
 				</div>
@@ -367,7 +367,7 @@
 						   Un vin d'honneur vous sera offert à l'issue des cérémonies au Complexe Immobilier LISE (Salle Relwendé).
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#" target="_blank"  data-target="#popup-lunch">Cliquer ici pour voir l'emplacement sur Google Maps</a>
+							<a href="#" data-toggle="modal" data-target="#popup-lunch">Cliquer ici pour voir l'emplacement sur Google Maps</a>
 						</p>
 					 </div>
 				</div>
