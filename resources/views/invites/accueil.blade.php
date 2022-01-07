@@ -54,7 +54,7 @@
 					<span></span>
 					<span></span>
 				</button>
-                <form method="POST" action="{{ route('logout') }}">
+                {{-- <form method="POST" action="{{ route('logout') }}"> --}}
 					@csrf
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
@@ -72,7 +72,7 @@
 							-->
                     </ul>
                 </div>
-			</form>
+			{{-- </form> --}}
             </div>
         </nav>
 	</header>
@@ -130,13 +130,13 @@
 							<div class="col-lg-8 col-md-6 col-sm-12">
 								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>Mariama BOUKARI</span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
                                 <ul style="list-style-type:none;">
-                                    <li>Les familles BOUKARI IBRAHIM et MOUSSA ABOUBACAR à Arlit, Agadez, Zindern Tanout, Dosso, Maradi, Niamey, France et Dakar;
+                                    <li>Les familles <b>BOUKARI IBRAHIM</b> et <b>MOUSSA ABOUBACAR</b> à Arlit, Agadez, Zindern Tanout, Dosso, Maradi, Niamey, France et Dakar;
                                     </li>
-                                    <li>Les familles Garba OUBA à Zinder, Guidan ROUMJI et Abou DANTCHIAWA à Niamey, CANADA et France ;
+                                    <li>Les familles <b>Garba OUBA</b> à Zinder, <b>Guidan ROUMJI</b> et <b>Abou DANTCHIAWA</b> à Niamey, CANADA et France ;
                                     </li>
-                                    <li>Les familles Zihadji ABOU à Agadez et Abdoul Karim ASSAO à Ouagadougou et Niamey;
+                                    <li>Les familles <b>Zihadji ABOU</b> à Agadez et <b>Abdoul Karim ASSAO</b> à Ouagadougou et Niamey;
                                     </li>
-                                    <li>M. Boukari IBRAHIM et son épouse Rabi MOUSSA à Arlit et Zinder;
+                                    <li>M. <b>Boukari IBRAHIM</b> et son épouse <b>Rabi MOUSSA</b> à Arlit et Zinder;
                                     </li>
                                     <li>
                                         Les familles alliées;
@@ -158,17 +158,17 @@
 								</div>
 							</div>
 							<div class="col-lg-8 col-md-6 col-sm-12">
-								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>Elvis TIENDREBEOGO </span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
+								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>N. Samson Elvis TIENDREBEOGO </span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
                                 <ul style="list-style-type:none;">
-                                    <li>Sa majesté le Dapoya Naaba de Saaba;</li>
-                                    <li>Les grandes familles TIENDREBEOGO, NIKIEMA, LAGMAWARE à Saaba, Ouagadougou, Bobo-Dioulassa, Mali, Congo, France et à Dakar ;
+                                    <li>Sa majesté le <b>Dapoya Naaba de Saaba</b>;</li>
+                                    <li>Les grandes familles <b>TIENDREBEOGO</b>, <b>NIKIEMA</b>, <b>LAGMAWARE</b> à Saaba, Ouagadougou, Bobo-Dioulassa, Mali, Congo, France et à Dakar ;
                                     </li>
-                                    <li>La familles ILBOUDO à Ouagadougou, Nioko et à Dakar ;
+                                    <li>La famille <b>ILBOUDO</b> à Ouagadougou, Nioko et à Dakar ;
                                     </li>
-                                    <li>La famille KABORE, à Ouagadougou, Zorghp et Tibin ;
+                                    <li>La famille <b>KABORE</b>, à Ouagadougou, Zorghp et Tibin ;
                                     </li>
                                     <li>
-                                        M. TIENDREBEOGO Désiré et son épouse TIENDREOBEOGO/KABORE Adèle à Katre-Yaar (secteur 46);
+                                        M. <b>TIENDREBEOGO Désiré</b> et son épouse <b>TIENDREOBEOGO/KABORE Adèle</b> à Katre-Yaar (secteur 46);
                                     </li>
                                     <li>Les familles alliées;</li>
                                 </ul>
@@ -313,7 +313,7 @@
 				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">
                     <div class="time-line-date-content">
                         <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            9h00
+                            11h00
                         </p>
                     </div>
 				</div>
@@ -322,10 +322,10 @@
 					<div class="timeline-text-content">
 						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">A la Mairie</h4>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-						   Le mariage civil débute à 9h à la mairie de Bogodogo.
+						   Le mariage civil débute à 11h00 à la mairie de Bogodogo.
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a>
+							<a href="#" target="_blank"  data-target="#popup-mairie">Cliquer ici pour voir l'emplacement sur Google Maps</a>
 						</p>
 					 </div>
 				</div>
@@ -334,7 +334,7 @@
 				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">
                     <div class="time-line-date-content">
                         <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            11h00
+                            11h45
                         </p>
                     </div>
 				</div>
@@ -346,7 +346,7 @@
 						   Rdv à l'église St Camille au 1200 logements pour le mariage réligieux.
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a>
+							<a href="#" target="_blank"  data-target="#popup-eglise">Cliquer ici pour voir l'emplacement sur Google Maps</a>
 						</p>
 					 </div>
 				</div>
@@ -355,45 +355,23 @@
 				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">
                     <div class="time-line-date-content">
                         <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            14h00
+                            13h00
                         </p>
                     </div>
 				</div>
 				<span class="iconBackground"></span>
 				<div class="col-xs-12 col-md-6 align-left">
 					<div class="timeline-text-content">
-						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Lunch</h4>
+						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Vin D'honneur</h4>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-						   Le Lunch se déroulera à l'espace Bon Berger à partir de 14h.
+						   Un vin d'honneur vous sera offert à l'issue des cérémonies au Complexe Immobilier LISE (Salle Relwendé).
 						</p>
 						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#" target="_blank">Cliquer ici pour voir l'emplacement sur Google Maps</a>
-						</p>
-					 </div>
-				</div>
-			</div>
-			<div class="row timeline-element reverse separline">
-				<div class="timeline-date-panel col-xs-12 col-md-6  align-left">
-                    <div class="time-line-date-content">
-                        <p class="mbr-timeline-date mbr-fonts-style display-font">
-                            16h00
-                        </p>
-                    </div>
-				</div>
-				<span class="iconBackground"></span>
-				<div class="col-xs-12 col-md-6 align-right">
-					<div class="timeline-text-content">
-						<h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font">Réception à domicile</h4>
-						<p class="mbr-timeline-text mbr-fonts-style display-7">
-						   Une réception est organisée au domicile du marié à 16h00.
-						</p>
-						<p class="mbr-timeline-text mbr-fonts-style display-7">
-							<a href="#"	data-toggle="modal" data-target="#popup-domicile">Voir l'emplacement</a>
+							<a href="#" target="_blank"  data-target="#popup-lunch">Cliquer ici pour voir l'emplacement sur Google Maps</a>
 						</p>
 					 </div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 
@@ -550,12 +528,12 @@
 
 
 	<!-- Start Modal -->
-	<div class="modal fade" id="popup-domicile" tabindex="-1" role="dialog"
+	<div class="modal fade" id="popup-mairie" tabindex="-1" role="dialog"
 	style="z-index: 1050; display: none;" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header justify-content-center">
-					<h2 class="modal-title">Domicile</h2>
+					<h2 class="modal-title">Mairie de Bogodogo</h2>
 					<button type="button" class="close" data-dismiss="modal" arial-label="Fermer">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -563,7 +541,49 @@
 				<div class="modal-body">
 					<div class="row">
 					<p style="margin: 0 auto;">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1929.5112075905108!2d-17.46964747851757!3d14.711324498104513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec173eb7e755579%3A0x84bc1adc0f98386e!2sCabinet%20DPM%20CONSULTING!5e0!3m2!1sfr!2sng!4v1639704387751!5m2!1sfr!2sng"
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.4615206173926!2d-1.4907455859625272!3d12.351987531514453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebe7b1149385d%3A0xd891e9d7f87df701!2sMairie%20de%20l&#39;arrondissement%20N%205%20-%20Bogodogo!5e0!3m2!1sfr!2sng!4v1641565632636!5m2!1sfr!2sng" 
+						width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="popup-eglise" tabindex="-1" role="dialog"
+	style="z-index: 1050; display: none;" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header justify-content-center">
+					<h2 class="modal-title">Eglise St Camille</h2>
+					<button type="button" class="close" data-dismiss="modal" arial-label="Fermer">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+					<p style="margin: 0 auto;">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.2403311557296!2d-1.497011225840558!3d12.366827475130792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebe426a847ec3%3A0x603f9f013507bfa6!2s%C3%89glise%20de%20Saint%20Camille!5e0!3m2!1sfr!2sng!4v1641565844899!5m2!1sfr!2sng" 
+						width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="popup-lunch" tabindex="-1" role="dialog"
+	style="z-index: 1050; display: none;" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header justify-content-center">
+					<h2 class="modal-title">Complexe Immobilier LISE</h2>
+					<button type="button" class="close" data-dismiss="modal" arial-label="Fermer">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+					<p style="margin: 0 auto;">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.0509984713294!2d-1.46865411642806!3d12.379516187368463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebee664e40955%3A0xa095349ea025290f!2sComplexe%20Immobilier%20Lise!5e0!3m2!1sfr!2sng!4v1641565629243!5m2!1sfr!2sng"
 						width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
 					</div>
 				</div>
